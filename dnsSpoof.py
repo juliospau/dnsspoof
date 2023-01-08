@@ -30,7 +30,7 @@ else:
 print ( f'{GREEN}[+] Spoofing {options.domain}...{RESET}' )
 
 def processPackets(packet):  # Función de llamada
-    scapyPacket = IP(packet.get_payload())  # Se convierten los datos a packetes de Scapy
+    scapyPacket = IP(packet.get_payload())  # Se convierten los datos a paquetes de Scapy
 
     if scapyPacket.haslayer(DNSRR) and scapyPacket.haslayer(UDP):
 
